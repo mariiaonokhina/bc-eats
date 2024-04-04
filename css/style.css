@@ -20,3 +20,54 @@ nav {
     list-style: none;
     margin: 0;
 }
+
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-message-container {
+    height: 10vh;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5vh;
+}
+
+.welcome-message {
+    text-align: center;
+}
+
+.utensils-img {
+    height: 50%;
+}
+
+.dietary-restrictions-container {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 0 0 33.3333%;
+    gap: 2vh;
+}
+
+.dietary-restriction {
+    width: 100px;
+    height: 100px;
+    padding: 2vw;
+    border: 5px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: space-around;
+
+}
+
+.dietary-restriction img {
+    height: 6vh;
+}
