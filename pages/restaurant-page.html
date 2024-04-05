@@ -1,16 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>BC Eats: Restaurant</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <script id="replace_with_navbar" src="../js/nav.js"></script>
-        This is a restaurant page!
-        <script src="index.js" async defer></script>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>BC Eats: Restaurant</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/restaurant.css" />
+  </head>
+  <body>
+    <script id="replace_with_navbar" src="../js/nav.js"></script>
+    <div class="grid">
+      <div class="column1">
+        <div class="image-container">
+          <img
+            src="../images/image.png"
+            alt="placeholder"
+            class="restaurant-image"
+          />
+          <img
+            src="../images/image.png"
+            alt="placeholder"
+            class="restaurant-image"
+          />
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10079.194092019303!2d-73.96058342949841!3d40.632511205503725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25b4d5430c0f5%3A0x3945ef763c0dcf48!2sOvi&#39;s%20Place!5e0!3m2!1sen!2sus!4v1712067396903!5m2!1sen!2sus"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="embeded-map"
+        ></iframe>
+        <a class="gMap-btn" href="" target="_blank">Open in Google Maps</a>
+      </div>
+      <div class="column2">
+        <h1 class="restaurant-name"></h1>
+        <ul class="tags"></ul>
+        <ul class="dates"></ul>
+        <p class="description"></p>
+        <p class="website">
+          Website:
+          <a class="restaurant-link" href="" target="_blank">Click Here</a>
+        </p>
+      </div>
+    </div>
+
+    <script src="../js/restaurant.js"></script>
+  </body>
 </html>
