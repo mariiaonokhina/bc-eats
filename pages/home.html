@@ -7,7 +7,7 @@
         <title>BC Eats: Home</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
         <script id="replace_with_navbar" src="../js/nav.js"></script>
@@ -19,6 +19,7 @@
                 <div>
                     <h1 class="welcome-message">Welcome to BC Eats!</h1>
                     <h2 class="welcome-message">What are your dietary restrictions?</h2>
+                    <p class="welcome-message">Select as many as you need.</p>
                 </div>
 
                 <img class="utensils-img" src="../assets/utensils-solid.svg" />
@@ -26,42 +27,65 @@
 
             <div class="dietary-restrictions-container">
                 <div class="dietary-restriction">
-                    <img src="../assets/star-of-david-solid.svg" />
-                    <p>Kosher</p>
+                    <input type="checkbox" class="restriction-checkbox" name="kosher" value="kosher" id="kosher" />
+                    <label for="kosher">
+                        <img src="../assets/star-of-david-solid.svg" />
+                        <p>Kosher</p>
+                    </label>
                 </div>
-
+            
                 <div class="dietary-restriction">
-                    <img src="../assets/star-and-crescent-solid.svg" />
-                    <p>Halal</p>
+                    <input type="checkbox" class="restriction-checkbox" name="halal" value="halal" id="halal" />
+                    <label for="halal">
+                        <img src="../assets/star-and-crescent-solid.svg" />
+                        <p>Halal</p>
+                    </label>
                 </div>
-
+            
                 <div class="dietary-restriction">
-                    <img src="../assets/seedling-solid.svg" />
-                    <p>Vegan</p>
+                    <input type="checkbox" class="restriction-checkbox" name="vegan" value="vegan" id="vegan" />
+                    <label for="vegan">
+                        <img src="../assets/seedling-solid.svg" />
+                        <p>Vegan</p>
+                    </label>
                 </div>
-
+            
                 <div class="dietary-restriction">
-                    <img src="../assets/carrot-solid.svg" />
-                    <p>Vegetarian</p>
+                    <input type="checkbox" class="restriction-checkbox" name="vegetarian" value="vegetarian" id="vegetarian" />
+                    <label for="vegetarian">
+                        <img src="../assets/carrot-solid.svg" />
+                        <p>Vegetarian</p>
+                    </label>
                 </div>
-
+            
                 <div class="dietary-restriction">
-                    <img src="../assets/fish-solid.svg" />
-                    <p>Pescatarian</p>
+                    <input type="checkbox" class="restriction-checkbox" name="pescatarian" value="pescatarian" id="pescatarian" />
+                    <label for="pescatarian">
+                        <img src="../assets/fish-solid.svg" />
+                        <p>Pescatarian</p>
+                    </label>
                 </div>
-
+            
                 <div class="dietary-restriction">
-                    <img src="../assets/wheat-awn-circle-exclamation-solid.svg" />
-                    <p>Gluten-free</p>
+                    <input type="checkbox" class="restriction-checkbox" name="glutenFree" value="gluten-free" id="glutenFree" />
+                    <label for="glutenFree">
+                        <img src="../assets/wheat-awn-circle-exclamation-solid.svg" />
+                        <p>Gluten-free</p>
+                    </label>
                 </div>
-
+            
                 <div class="dietary-restriction">
-                    <img src="../assets/burger-solid.svg" />
-                    <p>None</p>
+                    <input type="checkbox" class="restriction-checkbox" name="none" value="none" id="none" />
+                    <label for="none">
+                        <img src="../assets/burger-solid.svg" />
+                        <p>None</p>
+                    </label>
                 </div>
             </div>
+
+            <button class="continue-btn" style="display: none;">Done</button>
         </div>
 
-        <script src="index.js" async defer></script>
+        <script src="../js/homepage.js" async defer></script>
     </body>
 </html>
