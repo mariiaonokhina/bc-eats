@@ -14,3 +14,14 @@ checkboxes.forEach(checkbox => {
 });
 
 toggleContinueButton();
+
+document.querySelector('.continue-btn').addEventListener('click', function() {
+    // Hide the dietary restrictions container
+    document.getElementById('dietary-restrictions-container').style.display = 'none';
+
+    // Hide the continue button itself
+    this.style.display = 'none';
+
+    // Show the hello screen
+    document.getElementById('helloScreen').style.display = 'block';
+});

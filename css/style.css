@@ -55,7 +55,7 @@ nav li {
     height: 50%;
 }
 
-.dietary-restrictions-container {
+#dietary-restrictions-container {
     width: 70%;
     display: flex;
     flex-direction: row;
