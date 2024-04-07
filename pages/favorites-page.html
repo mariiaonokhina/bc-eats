@@ -6,11 +6,37 @@
         <title>BC Eats: Favorites</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../css/favorites.css">
     </head>
     <body>
         <script id="replace_with_navbar" src="../js/nav.js"></script>
-        This is a favorites page!
+        <div id="restaurants" class="flexList">
+            <div for="restaurant-1" class="flex-item-0">
+                <div class="restaurant">
+                    <p class="name">Example restaurant</p>
+                    <p class="price">$$$</p>
+                    <p class="date">Mon - Fri 00:00<br>Sat - Sun 00:00</p>
+                    <button class="button dangerButton smButton deleteButton" data-index="0">X</button>
+                </div>
+            </div>
+            <div for="restaurant-1" class="flex-item-1">
+                <div class="restaurant">
+                    <p class="name">Example restaurant</p>
+                    <p class="price">$$$</p>
+                    <p class="date">Mon - Fri 00:00<br>Sat - Sun 00:00</p>
+                    <button class="button dangerButton smButton deleteButton" data-index="0">X</button>
+                </div>
+            </div>
+            <div for="restaurant-1" class="flex-item-0">
+                <div class="restaurant">
+                    <p class="name">Example restaurant</p>
+                    <p class="price">$$$</p>
+                    <p class="date">Mon - Fri 00:00<br>Sat - Sun 00:00</p>
+                    <button class="button dangerButton smButton deleteButton" data-index="0">X</button>
+                </div>
+            </div>
+        </div>
+        <script src="../js/favorites.js"></script>
         <script src="index.js" async defer></script>
     </body>
 </html>
