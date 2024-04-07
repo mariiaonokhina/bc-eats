@@ -33,6 +33,7 @@ nav {
 
 .nav-container li{
     margin-left: 66px;
+    list-style-type: none;
 }
 
 /* ABOUT PAGE */
