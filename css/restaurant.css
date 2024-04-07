@@ -44,7 +44,7 @@
   padding: 20px;
 }
 .tags {
-  margin: 20px 0;
+  margin: 10px 0;
   display: flex;
   flex-wrap: wrap;
   gap: 2px;
@@ -80,4 +80,14 @@
 .website {
   margin-top: 20px;
   font-size: 1.2rem;
+}
+
+.price_tag {
+  list-style: none;
+  display: block;
+  background-color: rgb(226, 226, 226);
+  border: 1px solid gray;
+  padding: 5px 10px;
+  margin: 10px 0;
+  width: fit-content;
 }
