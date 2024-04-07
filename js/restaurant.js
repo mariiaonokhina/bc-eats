@@ -29,13 +29,26 @@ function updateUI(data) {
   restaurantImageContainer[1].src = data["images_url"][1];
 
   // Updating Iframe
-  iframeMap.src = `"${data["embeded_maps_url"]}"`;
+  iframeMap.attributes[0].value = `https://maps.google.com/maps?q=${data["lat"]},${data["lon"]}&hl=es;&output=embed`;
+  // console.log(iframeMap.attributes);
 
   // Updating Map-Button
   gMapButton.href = data["google_maps_url"];
 
   // Updating Title
-  restaurantName.textContent = data["restaurant_name"];
+  restaurantName.innerHTML = `${data["restaurant_name"]} <span class="heart">&#x2661</span>`;
+  const heart = document.querySelector(".heart");
+
+  heart.addEventListener("click", () => {
+    console.log(heart.innerHTML);
+    if (heart.textContent == "♡") {
+      heart.innerHTML = "♥";
+      heart.style.fontSize = "4rem";
+    } else {
+      heart.innerHTML = "♡";
+      heart.style.fontSize = "2.5rem";
+    }
+  });
 
   // Updating Tags
   data["tags"].forEach((tag) => {
