@@ -1,3 +1,5 @@
+import { restaurant_list } from "./restaurantdb.js";
+
 // Showing the continue button only when at least one of the restrictions is checked
 const checkboxes = document.querySelectorAll('.restriction-checkbox');
 const continueBtn = document.querySelector('.continue-btn');
