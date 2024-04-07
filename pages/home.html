@@ -14,20 +14,22 @@
 
         <div class="homepage-container">
             <div class="welcome-message-container">
-                <img class="utensils-img" src="../assets/utensils-solid.svg" />
+                
 
-                <div>
-                    <h1 class="welcome-message">Welcome to BC Eats!</h1>
-                    <h2 class="welcome-message">What are your dietary restrictions?</h2>
-                    <p class="welcome-message">Select as many as you need.</p>
+                <div id="welcome-message-container">
+                    <img class="utensils-img" src="../assets/utensils-solid.svg" />
+                    <div>
+                        <h1 class="welcome-message">Welcome to BC Eats!</h1>
+                        <h2 class="welcome-message">What are your dietary restrictions?</h2>
+                        <p class="welcome-message">Select as many as you need.</p>
+                    </div>
+                    <img class="utensils-img" src="../assets/utensils-solid.svg" />
                 </div>
-
-                <img class="utensils-img" src="../assets/utensils-solid.svg" />
             </div>
 
             <div id="dietary-restrictions-container">
                 <div class="dietary-restriction">
-                    <input type="checkbox" class="restriction-checkbox" name="kosher" value="kosher" id="kosher" />
+                    <input type="checkbox" class="restriction-checkbox" name="kosher" value="Kosher" id="kosher" />
                     <label for="kosher">
                         <img src="../assets/star-of-david-solid.svg" />
                         <p>Kosher</p>
@@ -35,7 +37,7 @@
                 </div>
             
                 <div class="dietary-restriction">
-                    <input type="checkbox" class="restriction-checkbox" name="halal" value="halal" id="halal" />
+                    <input type="checkbox" class="restriction-checkbox" name="halal" value="Halal" id="halal" />
                     <label for="halal">
                         <img src="../assets/star-and-crescent-solid.svg" />
                         <p>Halal</p>
@@ -43,7 +45,7 @@
                 </div>
             
                 <div class="dietary-restriction">
-                    <input type="checkbox" class="restriction-checkbox" name="vegan" value="vegan" id="vegan" />
+                    <input type="checkbox" class="restriction-checkbox" name="vegan" value="Vegan" id="vegan" />
                     <label for="vegan">
                         <img src="../assets/seedling-solid.svg" />
                         <p>Vegan</p>
@@ -51,7 +53,7 @@
                 </div>
             
                 <div class="dietary-restriction">
-                    <input type="checkbox" class="restriction-checkbox" name="vegetarian" value="vegetarian" id="vegetarian" />
+                    <input type="checkbox" class="restriction-checkbox" name="vegetarian" value="Vegetarian" id="vegetarian" />
                     <label for="vegetarian">
                         <img src="../assets/carrot-solid.svg" />
                         <p>Vegetarian</p>
@@ -59,7 +61,7 @@
                 </div>
             
                 <div class="dietary-restriction">
-                    <input type="checkbox" class="restriction-checkbox" name="pescatarian" value="pescatarian" id="pescatarian" />
+                    <input type="checkbox" class="restriction-checkbox" name="pescatarian" value="Pescatarian" id="pescatarian" />
                     <label for="pescatarian">
                         <img src="../assets/fish-solid.svg" />
                         <p>Pescatarian</p>
@@ -67,7 +69,7 @@
                 </div>
             
                 <div class="dietary-restriction">
-                    <input type="checkbox" class="restriction-checkbox" name="glutenFree" value="gluten-free" id="glutenFree" />
+                    <input type="checkbox" class="restriction-checkbox" name="glutenFree" value="Gluten-free" id="glutenFree" />
                     <label for="glutenFree">
                         <img src="../assets/wheat-awn-circle-exclamation-solid.svg" />
                         <p>Gluten-free</p>
@@ -75,7 +77,7 @@
                 </div>
             
                 <div class="dietary-restriction">
-                    <input type="checkbox" class="restriction-checkbox" name="none" value="none" id="none" />
+                    <input type="checkbox" class="restriction-checkbox" name="none" value="None" id="none" />
                     <label for="none">
                         <img src="../assets/burger-solid.svg" />
                         <p>None</p>
@@ -85,8 +87,33 @@
 
             <button class="continue-btn" style="display: none;">Done</button>
 
-            <div id="helloScreen" style="display: none;">
-                <h1>Hello</h1>
+            <div id="results-page" style="display: none;">
+                <label for="select-restrictions">Add a dietary restriction:</label>
+                <select name="select-restrictions" class="select-restrictions">
+                    <option value=" "></option>
+                    <option value="Kosher">Kosher</option>
+                    <option value="Halal">Halal</option>
+                    <option value="Vegan">Vegan</option>
+                    <option value="Vegetarian">Vegetarian</option>
+                    <option value="Pescatarian">Pescatarian</option>
+                    <option value="Gluten-free">Gluten-free</option>
+                    <option value="None">None</option>
+                </select>
+
+                <div id="tags-selected"></div>
+
+                <h2 id="number-of-results"></h2>
+                
+                <div id="sort-div">
+                    <label for="select-sort">Sort by</label>
+                    <select name="select-sort" class="select-restrictions">
+                        <option value="Price">Price</option>
+                        <option value="Favorites-first">Favorites first</option>
+                        <option value="Open-first">Open now first</option>
+                    </select>
+                </div>
+
+                <div id="results-container"></div>
             </div>
         </div>
 

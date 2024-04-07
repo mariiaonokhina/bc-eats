@@ -38,9 +38,9 @@ nav li {
   top: 14vh;
 }
 
-.welcome-message-container {
+#welcome-message-container {
   height: 10vh;
-  width: 50%;
+  width: 50vw;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -53,7 +53,8 @@ nav li {
 }
 
 .utensils-img {
-  height: 50%;
+  position: relative;
+  height: 8vh;
 }
 
 #dietary-restrictions-container {
