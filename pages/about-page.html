@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>BC Eats: About</title>
+        <title>BC Eats: Contact</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
@@ -11,9 +11,52 @@
     </head>
     <body>
         <script id="replace_with_navbar" src="../js/nav.js"></script>
+
+        <div class="wrapper">
+            <h1>Meet Our Team</h1>
+            <hr>
+            <h2></h2>
+            <div class="members">
+                <div class = team-mem>
+                    <img src="mariia.png">
+                    <h3>Mariia </h3>
+                    <p>Team Member 1 Bio</p>
+                </div>
+                    <div class="team-mem">
+                    <img src="alejandro.jpg">
+                    <h3>Alejandro </h3>
+                    <p>Team Member 2 Bio</p>
+                </div>
+                <div class="team-mem">
+                    <img src="jennifer.png">
+                    <h3>Jennifer Alvarado</h3>
+                    <p>Aspiring Frontend/UI Developer</p>
+                </div>
+                <div class="team-mem">
+                    <img src="team-member4.jpg">
+                    <h3>Lameeha </h3>
+                    <p>Team Member 4 Bio</p>
+                </div>
+                <div class="team-mem">
+                    <img src="team-member5.jpg">
+                    <h3>Oleksi </h3>
+                    <p>Team Member 5 Bio</p>
+                </div>
+            </div>
+        </div>
         
-        This is an about us page!
-        <script src="index.js" async defer></script>
+        <div class="contact-container">
+            <h1>Contact Us</h1>
+            <p>Feel free to reach out to us using the form below:</p>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button id="submit" onclick="showMessage()">Submit</button>
+            </form>
+        </div>
     </body>
-    
 </html>
