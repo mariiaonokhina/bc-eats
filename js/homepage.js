@@ -40,29 +40,31 @@ function fetchAndDisplayRestaurants() {
         // Clear previous results
         resultsDiv.innerHTML = '';
     
-    const selectedTags = Array.from(checkboxes)
-                        .filter(checkbox => checkbox.checked)
-                        .map(checkbox => checkbox.value);
+        const selectedTags = Array.from(checkboxes)
+                            .filter(checkbox => checkbox.checked)
+                            .map(checkbox => checkbox.value);
 
-    let filteredRestaurants;
+        let filteredRestaurants;
 
-    if (selectedTags[0] == "None") {
-        filteredRestaurants = allRestaurants;
-    }   else {
-        // Filter the restaurants based on the selected tags
-        filteredRestaurants = allRestaurants.filter(restaurant =>
-            selectedTags.every(tag => restaurant.tags.includes(tag))
-        );
-    }
+        if (selectedTags.includes("None")) {
+            filteredRestaurants = allRestaurants;
+        } else {
+            // Filter the restaurants based on the selected tags
+            filteredRestaurants = allRestaurants.filter(restaurant =>
+                selectedTags.every(tag => restaurant.tags.includes(tag))
+            );
+        }
 
-    // Add each restaurant to the container
-    filteredRestaurants.forEach(restaurant => {
-        resultsDiv.appendChild(createRestaurantElement(restaurant));
-    });
-    })
-    .catch((error) => console.error("Fetch Error:", error));
+        // Add each restaurant to the container
+        filteredRestaurants.forEach(restaurant => {
+            resultsDiv.appendChild(createRestaurantElement(restaurant));
+        });
 
-    numOfResults = filteredRestaurants.length();
+        // Set the number of results
+        numOfResultsDiv.textContent = `${filteredRestaurants.length} result(s) found`;
+
+      })
+      .catch((error) => console.error("Fetch Error:", error));
 }
 
 function createRestaurantElement(restaurant) {
@@ -87,9 +89,6 @@ document.querySelector(".continue-btn").addEventListener("click", function() {
     populateTagsSelected();
 
     fetchAndDisplayRestaurants();
-
-    if (num)
-    numOfResultsDiv.innerHTML = numOfResultsDiv"";
 
     // Show the results
     document.getElementById("results-page").style.display = "block";
