@@ -2,6 +2,8 @@
 const checkboxes = document.querySelectorAll('.restriction-checkbox');
 const continueBtn = document.querySelector('.continue-btn');
 const tagsSelected = document.getElementById("tags-selected");
+const resultsDiv = document.getElementById("results-container");
+const numOfResultsDiv = document.getElementById("number-of-results");
 
 function toggleContinueButton() {
     const isAnyCheckboxChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
@@ -30,6 +32,50 @@ checkboxes.forEach(checkbox => {
 
 toggleContinueButton();
 
+function fetchAndDisplayRestaurants() {
+    fetch(`http://localhost:8080/restaurants`)
+      .then((response) => response.json())
+      .then((allRestaurants) => {
+
+        // Clear previous results
+        resultsDiv.innerHTML = '';
+    
+    const selectedTags = Array.from(checkboxes)
+                        .filter(checkbox => checkbox.checked)
+                        .map(checkbox => checkbox.value);
+
+    let filteredRestaurants;
+
+    if (selectedTags[0] == "None") {
+        filteredRestaurants = allRestaurants;
+    }   else {
+        // Filter the restaurants based on the selected tags
+        filteredRestaurants = allRestaurants.filter(restaurant =>
+            selectedTags.every(tag => restaurant.tags.includes(tag))
+        );
+    }
+
+    // Add each restaurant to the container
+    filteredRestaurants.forEach(restaurant => {
+        resultsDiv.appendChild(createRestaurantElement(restaurant));
+    });
+    })
+    .catch((error) => console.error("Fetch Error:", error));
+
+    numOfResults = filteredRestaurants.length();
+}
+
+function createRestaurantElement(restaurant) {
+    const restaurantElement = document.createElement('div');
+    restaurantElement.classList.add('restaurant');
+  
+    const restaurantName = document.createElement('h3');
+    restaurantName.textContent = restaurant.restaurant_name;
+    restaurantElement.appendChild(restaurantName);
+  
+    return restaurantElement;
+}
+
 document.querySelector(".continue-btn").addEventListener("click", function() {
     // Hide the dietary restrictions container and the welcome message
     document.getElementById("dietary-restrictions-container").style.display = "none";
@@ -39,6 +85,11 @@ document.querySelector(".continue-btn").addEventListener("click", function() {
     this.style.display = "none";
 
     populateTagsSelected();
+
+    fetchAndDisplayRestaurants();
+
+    if (num)
+    numOfResultsDiv.innerHTML = numOfResultsDiv"";
 
     // Show the results
     document.getElementById("results-page").style.display = "block";

@@ -88,7 +88,7 @@
             <button class="continue-btn" style="display: none;">Done</button>
 
             <div id="results-page" style="display: none;">
-                <label for="select-restrictions">Add a dietary restriction:</label>
+                <label for="select-restrictions">What would you like?</label>
                 <select name="select-restrictions" class="select-restrictions">
                     <option value=" "></option>
                     <option value="Kosher">Kosher</option>
@@ -97,8 +97,13 @@
                     <option value="Vegetarian">Vegetarian</option>
                     <option value="Pescatarian">Pescatarian</option>
                     <option value="Gluten-free">Gluten-free</option>
-                    <option value="None">None</option>
-                </select>
+                    <option value="Dine-In">Dine-In</option>
+                    <option value="Takeout">Takeout</option>
+                    <option value="Healthy">Healthy</option>
+                    <option value="Hot Food">Hot Food</option>
+                    <option value="Drinks">Drinks</option>
+                </select>                
+                <button id="add-restriction">Add</button>
 
                 <div id="tags-selected"></div>
 
@@ -108,8 +113,8 @@
                     <label for="select-sort">Sort by</label>
                     <select name="select-sort" class="select-restrictions">
                         <option value="Price">Price</option>
+                        <option value="Closest-first">Distance</option>
                         <option value="Favorites-first">Favorites first</option>
-                        <option value="Open-first">Open now first</option>
                     </select>
                 </div>
 
