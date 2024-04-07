@@ -35,14 +35,21 @@
   margin: 20px auto 5px;
   width: 100%;
   padding: 10px 0;
-  background-color: rgb(226, 226, 226);
+  background-color: #f6f0e6;
   border-radius: 4px;
-  border: 1px solid gray;
+  border: 2px solid #e3a75d;
+  color: #af8754;
+  font-weight: bold;
 }
-
+/* COLUMN 1 */
 .column2 {
   padding: 20px;
 }
+.restaurant-name {
+  font-size: 4rem;
+  color: #af8754;
+}
+
 .tags {
   margin: 10px 0;
   display: flex;
@@ -53,41 +60,63 @@
 .tags li {
   list-style: none;
   display: block;
-  background-color: rgb(226, 226, 226);
-  border: 1px solid gray;
+  background-color: #f6f0e6;
+  border: 1px solid #e3a75d;
   padding: 5px 10px;
   margin: 2px 0;
+  color: #e3a75d;
 }
 
 .dates {
   width: fit-content;
-  background-color: rgb(226, 226, 226);
-  border: 1px solid gray;
+  background-color: #f6f0e6;
+  border: 1px solid #e3a75d;
   padding: 5px 15px;
 }
 
 .dates li {
   list-style: none;
   margin-top: 2px;
+  color: #ddbb90;
 }
 .dates li span {
   display: inline-block;
-  width: 85px;
+  width: 100px;
   font-weight: bold;
+  color: #e3a75d;
 }
 
-.description,
-.website {
-  margin-top: 20px;
+.description {
+  margin: 20px 0;
   font-size: 1.2rem;
+  padding: 0;
 }
 
 .price_tag {
   list-style: none;
   display: block;
-  background-color: rgb(226, 226, 226);
-  border: 1px solid gray;
+  background-color: #f6f0e6;
+  border: 1px solid #e3a75d;
   padding: 5px 10px;
   margin: 10px 0;
   width: fit-content;
+  color: #ddbb90;
+}
+.price_tag strong {
+  color: #e3a75d;
+}
+
+.restaurant-link {
+  display: block;
+  width: fit-content;
+  color: #af8754;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #f6f0e6;
+  border-radius: 10px;
+  border: 1px solid #af8754;
+}
+
+.heart {
+  font-size: 2.5rem;
 }
