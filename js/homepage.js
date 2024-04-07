@@ -14,6 +14,36 @@ function toggleContinueButton() {
     else continueBtn.style.display = "none";
 }
 
+function setupCheckboxListeners() {
+    const noneCheckbox = document.getElementById('none'); 
+
+    checkboxes.forEach(checkbox => {
+        if (checkbox === noneCheckbox) {
+            // If this is the "None" checkbox
+            checkbox.addEventListener('change', () => {
+                if (checkbox.checked) {
+                    // Uncheck all other checkboxes
+                    checkboxes.forEach(box => {
+                        if (box !== noneCheckbox) box.checked = false;
+                    });
+                }
+                toggleContinueButton();
+            });
+        } else {
+            // For all other checkboxes
+            checkbox.addEventListener('change', () => {
+                if (checkbox.checked && noneCheckbox.checked) {
+                    // Uncheck "None" if other checkbox is checked
+                    noneCheckbox.checked = false;
+                }
+                toggleContinueButton();
+            });
+        }
+    });
+}
+
+setupCheckboxListeners(); 
+
 function populateTagsSelected() {
     populateTagsSelected.innerHTML = "";    // Clear previous tags
 
