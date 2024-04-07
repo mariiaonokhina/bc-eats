@@ -35,38 +35,31 @@ checkboxes.forEach(checkbox => {
 toggleContinueButton();
 
 function fetchAndDisplayRestaurants() {
-    fetch(`http://localhost:8080/restaurants`)
-      .then((response) => response.json())
-      .then((allRestaurants) => {
+    // Clear previous results
+    resultsDiv.innerHTML = '';
+  
+    const selectedTags = Array.from(checkboxes)
+                        .filter(checkbox => checkbox.checked)
+                        .map(checkbox => checkbox.value);
 
-        // Clear previous results
-        resultsDiv.innerHTML = '';
-    
-        const selectedTags = Array.from(checkboxes)
-                            .filter(checkbox => checkbox.checked)
-                            .map(checkbox => checkbox.value);
+    let filteredRestaurants;
 
-        let filteredRestaurants;
+    if (selectedTags.includes("None")) {
+        filteredRestaurants = restaurant_list;
+    } else {
+        // Filter the restaurants based on the selected tags
+        filteredRestaurants = restaurant_list.filter(restaurant =>
+            selectedTags.every(tag => restaurant.tags.includes(tag))
+        );
+    }
 
-        if (selectedTags.includes("None")) {
-            filteredRestaurants = allRestaurants;
-        } else {
-            // Filter the restaurants based on the selected tags
-            filteredRestaurants = allRestaurants.filter(restaurant =>
-                selectedTags.every(tag => restaurant.tags.includes(tag))
-            );
-        }
+    // Add each restaurant to the container
+    filteredRestaurants.forEach(restaurant => {
+        resultsDiv.appendChild(createRestaurantElement(restaurant));
+    });
 
-        // Add each restaurant to the container
-        filteredRestaurants.forEach(restaurant => {
-            resultsDiv.appendChild(createRestaurantElement(restaurant));
-        });
-
-        // Set the number of results
-        numOfResultsDiv.textContent = `${filteredRestaurants.length} result(s) found`;
-
-      })
-      .catch((error) => console.error("Fetch Error:", error));
+    // Set the number of results
+    numOfResultsDiv.textContent = `${filteredRestaurants.length} result(s) found`;
 }
 
 function createRestaurantElement(restaurant) {
