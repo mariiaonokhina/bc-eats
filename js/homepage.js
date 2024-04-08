@@ -64,6 +64,10 @@ checkboxes.forEach(checkbox => {
 
 toggleContinueButton();
 
+function getSelectedTags() {
+    return Array.from(tagsSelected.children).map(tag => tag.textContent);
+}
+
 function fetchAndDisplayRestaurants() {
     // Clear previous results
     resultsDiv.innerHTML = '';
@@ -117,4 +121,22 @@ document.querySelector(".continue-btn").addEventListener("click", function() {
 
     // Show the results
     document.getElementById("results-page").style.display = "block";
+});
+
+document.getElementById("add-restriction").addEventListener("click", function() {
+    const selectElement = document.querySelector(".select-restrictions");
+    const selectedValue = selectElement.value;
+    
+    // Check if the selected value is not empty and not already added
+    if (selectedValue && !Array.from(tagsSelected.children).some(tag => tag.textContent === selectedValue)) {
+        const newTag = document.createElement("span");
+        newTag.textContent = selectedValue;
+        newTag.classList.add("tag");
+        
+        // Append the new tag to the tags-selected container
+        tagsSelected.appendChild(newTag);
+
+        // Optionally, you might want to reset the select dropdown back to its placeholder option
+        selectElement.value = " ";
+    }
 });
