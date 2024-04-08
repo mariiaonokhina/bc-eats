@@ -49,8 +49,19 @@ function populateTagsSelected() {
 
     checkboxes.forEach(checkbox => {
         if (checkbox.checked) {
-            const newTag = document.createElement("span");
-            newTag.textContent = checkbox.value;
+            const newTag = document.createElement("div");
+            let img = document.createElement('img');
+            let text = document.createElement('span');
+
+            text.innerHTML = checkbox.value;
+
+            img.src = "../assets/x-solid.svg";
+
+            img.classList.add("cancel-img");
+            
+            newTag.appendChild(img);
+            newTag.appendChild(text);
+
             newTag.classList.add("tag");
 
             tagsSelected.appendChild(newTag);
@@ -93,16 +104,39 @@ function fetchAndDisplayRestaurants() {
     });
 
     // Set the number of results
-    numOfResultsDiv.textContent = `${filteredRestaurants.length} result(s) found`;
+    numOfResultsDiv.textContent = `${filteredRestaurants.length} result(s) found:`;
 }
 
 function createRestaurantElement(restaurant) {
     const restaurantElement = document.createElement('div');
-    restaurantElement.classList.add('restaurant');
   
     const restaurantName = document.createElement('h3');
-    restaurantName.textContent = restaurant.restaurant_name;
-    restaurantElement.appendChild(restaurantName);
+    const image = document.createElement("img");
+    const price = document.createElement("span");
+    const schedule = document.createElement("p");
+    const divInfo = document.createElement("div");
+    const divTools = document.createElement("div");
+
+    restaurantName.innerHTML = restaurant.restaurant_name;
+    image.src = restaurant.images_url[0];
+
+    price.innerHTML = restaurant.price_tag;
+    schedule.innerHTML = restaurant.dates;
+
+    restaurantElement.classList.add("result");
+
+    divInfo.appendChild(restaurantName);
+    divInfo.appendChild(price);
+    divInfo.appendChild(schedule);
+
+    divInfo.classList.add("div-info");
+    divTools.classList.add("div-tools");
+
+    divTools.innerHTML = ">";
+
+    restaurantElement.appendChild(image);
+    restaurantElement.appendChild(divInfo);
+    restaurantElement.appendChild(divTools);
   
     return restaurantElement;
 }
@@ -129,9 +163,7 @@ document.getElementById("add-restriction").addEventListener("click", function() 
     
     // Check if the selected value is not empty and not already added
     if (selectedValue && !Array.from(tagsSelected.children).some(tag => tag.textContent === selectedValue)) {
-        const newTag = document.createElement("span");
-        newTag.textContent = selectedValue;
-        newTag.classList.add("tag");
+        
         
         // Append the new tag to the tags-selected container
         tagsSelected.appendChild(newTag);
