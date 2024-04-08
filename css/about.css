@@ -6,12 +6,11 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    height: fit-content;
 }
 
 /* ABOUT PAGE */
@@ -19,16 +18,19 @@ body {
     width: 675px;
     border-radius: 15px;
     padding: 20px;
-    background-color: #fff;
+    background-color: #ddbb90;
 }
 
 .wrapper h1{
     text-align: center;
+    font-family: Trocchi;
 }
 
 hr{
     width: 100px;
     margin: 10px auto;
+    color: white;
+    text-decoration-line: none;
 }
 
 .utensils-img {
@@ -67,18 +69,22 @@ hr{
 }
 
 .contact-container {
-    background-color: #fff;
+    background-color: #ddbb90;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 675px;
+    height: auto;
     
     flex-direction: column;
-    margin-top: 800px;
-    margin-bottom: 25px;
-    position: absolute;
-    
+    margin-top: 900px;
+    position: absolute;  
+}
+
+.contact-container h1{
+    font-family: poltawski nowy;
+    margin-bottom: 10px;
 }
 
 .contact-container form {
@@ -88,21 +94,20 @@ hr{
     align-items: center;
 }
 
-.contact-container label {
-    display: block;
-    margin-bottom: 5px;
-    
-    color: #333;
+.contact-container p{
+    font-family: trocchi;
 }
 
 .contact-container input,
 .contact-container textarea {
-    width: 80%;
+    width: 650px;
     padding: 8px;
+    color: #333;
     margin-bottom: 10px;
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-family: trocchi;
 }
 
 .contact-container button {
@@ -116,4 +121,11 @@ hr{
 
 .contact-container button:hover {
     background-color: #e74c3c;
+}
+
+#contact-form {
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
