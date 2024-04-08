@@ -434,7 +434,6 @@ hr {
   padding: 10px;
   display: flex;
   flex-direction: row;
-  flex-grow: 100%;
 }
 
 .restaurant img {
@@ -480,6 +479,17 @@ hr {
   color: white;
   background-color: #e74c3c;
   height: 100%;
+  margin-left: 40px;
+}
+
+#fav-restaurant-1 {
+  display: block;
+}
+#fav-restaurant-2 {
+  display: block;
+}
+#fav-restaurant-3 {
+  display: block;
 }
 
 @media (max-width: 800px) {

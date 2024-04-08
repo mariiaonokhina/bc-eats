@@ -12,35 +12,38 @@
         <script id="replace_with_navbar" src="../js/nav.js"></script>
         <h1>Favorites</h1>
         <div id="restaurants" class="favFlexList">
-            <div for="restaurant-1" class="flex-item-0">
-                <button class="restaurant">
+            <div id="fav-restaurant-1" class="flex-item-0">
+                <div class="restaurant">
+                    <img src="../images/image.png">
                     <div class="res-info">
                         <p class="fav-name">Example restaurant</p>
                         <p class="fav-price">$$$</p>
                         <p class="fav-date">Mon - Fri 00:00<br>Sat - Sun 00:00</p>
                     </div>
-                    <span class="button dangerButton smButton deleteButton" data-index="0">X</span>
-                </button>
+                    <button class="deleteButton" type="button">X</button>
+                </div>
             </div>
-            <div for="restaurant-1" class="flex-item-1">
-                <button class="restaurant">
+            <div id="fav-restaurant-2" class="flex-item-1">
+                <div class="restaurant">
+                    <img src="../images/image.png">
                     <div class="res-info">
                         <p class="fav-name">Example restaurant</p>
                         <p class="fav-price">$$$</p>
                         <p class="fav-date">Mon - Fri 00:00<br>Sat - Sun 00:00</p>
                     </div>
-                    <span class="button dangerButton smButton deleteButton" data-index="0">X</span>
-                </button>
+                    <button class="deleteButton" type="button">X</button>
+                </div>
             </div>
-            <div for="restaurant-1" class="flex-item-0">
-                <button class="restaurant">
+            <div id="fav-restaurant-3" class="flex-item-0">
+                <div class="restaurant">
+                    <img src="../images/image.png">
                     <div class="res-info">
                         <p class="fav-name">Example restaurant</p>
                         <p class="fav-price">$$$</p>
                         <p class="fav-date">Mon - Fri 00:00<br>Sat - Sun 00:00</p>
                     </div>
-                    <span class="button dangerButton smButton deleteButton" data-index="0">X</span>
-                </button>
+                    <button class="deleteButton" type="button" onclick="getElementById('fav-restaurant-3').style.display = none">X</button>
+                </div>
             </div>
         </div>
         <div id="restaurantList">
