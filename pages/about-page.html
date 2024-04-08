@@ -1,65 +1,76 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>BC Eats: Contact</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../css/main.css">
-        
-    </head>
-    <body>
-        <script id="replace_with_navbar" src="../js/nav.js"></script>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>BC Eats: Contact</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <script id="replace_with_navbar" src="../js/nav.js"></script>
 
-        <div class="about-wrapper">
-            <h1>Meet Our Team</h1>
-            <hr>
-            <h2></h2>
-            <div class="members">
-                <div class = team-mem>
-                    <img src="../assets/mariia.png">
-                    <h3>Mariia Onokhina</h3>
-                    <p>Aspiring Software Engineer</p>
-                </div>
-                    <div class="team-mem">
-                    <img src="../assets/alejandro.jpg">
-                    <h3>Alejandro Hernandez</h3>
-                    <p>Aspiring Spiderman + Loves food</p>
-                </div>
-                <div class="team-mem">
-                    <img src="../assets/jeny.jpg">
-                    <h3>Jennifer Alvarado</h3>
-                    <p>Aspiring Frontend/UI Engineer</p>
-                </div>
-                <div class="team-mem">
-                    <img src="../assets/lameeha.jpeg">
-                    <h3>Lameeha Sheikh</h3>
-                    <p>Team Member 4 Bio</p>
-                </div>
-                <div class="team-mem">
-                    <img src="../assets/oleskii.png">
-                    <h3>Oleksii Sudarin </h3>
-                    <p>Team Member 5 Bio</p>
-                </div>
-            </div>
+    <div class="about-wrapper">
+      <h1>Meet Our Team</h1>
+      <hr />
+      <h2></h2>
+      <div class="members">
+        <div class="team-mem">
+          <img src="../assets/mariia.png" />
+          <h3>Mariia Onokhina</h3>
+          <p>Aspiring Software Engineer</p>
         </div>
-        
-        <div class="contact-container">
-            <h1>Contact Us</h1>
-            <p>Feel free to reach out to us using the form below:</p>
-            <form id="contact-form">
-                <div>
-                    <input type="text" id="name" placeholder = "Name" required>
-                </div>
-                <div>
-                    <input type="email" id="email" name="email" placeholder = "Email" required>
-                </div>
-                <div>
-                    <textarea id="message" name="message" placeholder="Message"></textarea>
-                </div>
-                <button id="submit" onclick="showMessage()">Submit</button>
-            </form>
+        <div class="team-mem">
+          <img src="../assets/alejandro.jpg" />
+          <h3>Alejandro Hernandez</h3>
+          <p>Aspiring Spiderman + Loves food</p>
         </div>
-    </body>
+        <div class="team-mem">
+          <img src="../assets/jeny.jpg" />
+          <h3>Jennifer Alvarado</h3>
+          <p>Aspiring Frontend/UI Engineer</p>
+        </div>
+        <div class="team-mem">
+          <img src="../assets/lameeha.jpeg" />
+          <h3>Lameeha Sheikh</h3>
+          <p>Team Member 4 Bio</p>
+        </div>
+        <div class="team-mem">
+          <img src="../assets/oleskii.png" />
+          <h3>Oleksii Sudarin</h3>
+          <p>Team Member 5 Bio</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-container">
+      <h1>Contact Us</h1>
+      <p>Feel free to reach out to us using the form below:</p>
+      <form id="contact-form">
+        <div>
+          <input type="text" id="name" placeholder="Name" required />
+        </div>
+        <div>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+        </div>
+        <div>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Message"
+          ></textarea>
+        </div>
+        <p class="submission-message"></p>
+        <button id="submit">Submit</button>
+      </form>
+    </div>
+    <script src="../js/about.js"></script>
+  </body>
 </html>

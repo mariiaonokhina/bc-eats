@@ -1,222 +1,222 @@
-@import url('https://fonts.cdnfonts.com/css/black-han-sans');
-@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&display=swap');
+@import url("https://fonts.cdnfonts.com/css/black-han-sans");
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-    font-family: 'Black Han Sans', sans-serif;
-    letter-spacing: 1px;
-    font-size: 50px;
+  font-family: "Black Han Sans", sans-serif;
+  letter-spacing: 1px;
+  font-size: 50px;
 }
 
 body {
-    font-family: "Ysabeau Office", sans-serif;
-    font-size: 17px;
-    background-color: #e0d2cc;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  font-family: "Ysabeau Office", sans-serif;
+  font-size: 17px;
+  background-color: #e0d2cc;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* -----Navigation Bar */
 
 nav {
-    position: absolute;
-    background-color: #b97557;
-    display: flex;
-    flex-wrap: wrap;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    align-items: center;
-    justify-content: space-around;
+  position: absolute;
+  background-color: #b97557;
+  display: flex;
+  flex-wrap: wrap;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .navlink {
-    flex: 25%;
+  flex: 25%;
 }
 .logo {
-    flex: 1;
+  flex: 1;
 }
 
 button.nav-butt {
-    border: 0;
-    width: 100%;
-    height: 100px;
-    background-color: #b97557;
-    font-size: 40px;
-    font-family: "Ysabeau Office", sans-serif;
-    font-weight: bolder;
-    transition-duration: 0.4s;
-    cursor: pointer;
+  border: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #b97557;
+  font-size: 40px;
+  font-family: "Ysabeau Office", sans-serif;
+  font-weight: bolder;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
 
 button:hover.nav-butt {
-    background-color: #d29072;
+  background-color: #d29072;
 }
 
 @media (max-width: 600px) {
-    .navlink {
-        flex: 50%;
-    }
+  .navlink {
+    flex: 50%;
+  }
 }
 
 /* -----Landing/Index Page */
 
 body.land {
-    background-color: rgb(177, 177, 177);
-    text-align: center;
+  background-color: rgb(177, 177, 177);
+  text-align: center;
 }
 
 img.land {
-    max-width: 100%;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
+  max-width: 100%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
 }
 
 .landbox {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .land-input-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .land-input-container p {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .land-input-container input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    font-family: "Ysabeau Office", sans-serif;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  font-family: "Ysabeau Office", sans-serif;
 }
 
 .land-input-container button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .land-input-container button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 /* -----Home Page */
 
 .homepage-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 15vh;
 }
-  
+
 #welcome-message-container {
-    width: 50vw;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 5vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5vh;
 }
 
 #welcome-message-container div {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
-  
+
 .welcome-message {
-    text-align: center;
+  text-align: center;
 }
-  
+
 .utensils-img {
-    position: relative;
-    height: 8vh;
+  position: relative;
+  height: 8vh;
 }
-  
+
 #dietary-restrictions-container {
-    width: 60%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex: 33%;
-    gap: 40px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 33%;
+  gap: 40px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
-  
+
 .dietary-restriction {
-    width: 130px;
-    height: 130px;
-    border: 7px solid #af8754;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    place-items: center;
-    justify-content: center;
+  width: 130px;
+  height: 130px;
+  border: 7px solid #af8754;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
 }
-  
+
 .dietary-restriction label {
-    display: flex;
-    flex-direction: column;
-    place-items: center;
-    justify-content: space-around;
-    height: 100%;
-    width: 100%;
-    cursor: pointer;
-    user-select: none;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
 }
-  
+
 .dietary-restriction:hover {
-    cursor: pointer;
-    transform: scale(105%);
+  cursor: pointer;
+  transform: scale(105%);
 }
-  
+
 .dietary-restriction img {
-    height: 6vh;
+  height: 6vh;
 }
-  
+
 .restriction-checkbox {
-    height: 0;
-    width: 0;
-    cursor: pointer;
+  height: 0;
+  width: 0;
+  cursor: pointer;
 }
 
 .restriction-checkbox:checked ~ label {
-    border-radius: 12px;
-    background-color: #d9ac98;
+  border-radius: 12px;
+  background-color: #d9ac98;
 }
 
 .continue-btn {
@@ -315,301 +315,306 @@ img.land {
 
 /* -----About Us Page */
 
-.about-wrapper{
-    width: 800px;
-    border-radius: 15px;
-    padding: 20px;
-    background-color: #ddbb90;
+.about-wrapper {
+  width: 800px;
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #ddbb90;
 }
 
 .about-wrapper h1 {
-    text-align: center;
+  text-align: center;
 }
 
 hr {
-    width: 100px;
-    margin: 10px auto;
-    color: white;
-    text-decoration-line: none;
+  width: 100px;
+  margin: 10px auto;
+  color: white;
+  text-decoration-line: none;
 }
 
-.members{
-    display: flex;
+.members {
+  display: flex;
 }
 
 .team-mem {
-    margin-top: 8px;
-    margin-bottom: 8px;
-    flex: 20%;
-    text-align: center;
-
+  margin-top: 8px;
+  margin-bottom: 8px;
+  flex: 20%;
+  text-align: center;
 }
 
 .team-mem img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px;
 }
 
-.team-mem h3, .team-mem p{
-    text-align: center;
-    font-size: 12px;
-    margin: 7px;
+.team-mem h3,
+.team-mem p {
+  text-align: center;
+  font-size: 12px;
+  margin: 7px;
 }
 
 .contact-container {
-    background-color: #ddbb90;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 800px;
-    height: auto;
-    
-    flex-direction: column;
-    margin-top: 900px;
-    position: absolute;  
+  background-color: #ddbb90;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 800px;
+  height: auto;
+
+  flex-direction: column;
+  margin-top: 900px;
+  position: absolute;
 }
 
-.contact-container h1{
-    margin-bottom: 10px;
+.contact-container h1 {
+  margin-bottom: 10px;
 }
 
 .contact-container form {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-container input,
 .contact-container textarea {
-    width: 650px;
-    padding: 8px;
-    color: #333;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: "Ysabeau Office", sans-serif;
+  width: 650px;
+  padding: 8px;
+  color: #333;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: "Ysabeau Office", sans-serif;
 }
 
 .contact-container button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .contact-container button:hover {
-    background-color: #e74c3c;
+  background-color: #e74c3c;
 }
 
 #contact-form {
-    height: 45vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 /* -----Favorites Page */
 
 .favFlexList {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .restaurant {
-    border: 7px solid #af8754;
-    border-radius: 20px;
-    margin: 10px;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    flex-grow: 100%;
+  border: 7px solid #af8754;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 100%;
 }
 
 .restaurant img {
-    aspect-ratio: 1/1;
-    width: 15%;
+  aspect-ratio: 1/1;
+  width: 15%;
 }
 
 .fav-name {
-    font-family: "Ysabeau Office", sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: left;
+  font-family: "Ysabeau Office", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
 }
 
 .fav-price {
-    font-family: "Ysabeau Office", sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: left;
+  font-family: "Ysabeau Office", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
 }
 
 .fav-date {
-    font-family: "Ysabeau Office", sans-serif;
-    font-size: 15px;
-    color: rgb(148, 148, 148);
-    text-align: left;
+  font-family: "Ysabeau Office", sans-serif;
+  font-size: 15px;
+  color: rgb(148, 148, 148);
+  text-align: left;
 }
 
 .res_info {
-    align-items: stretch;
+  align-items: stretch;
 }
 
 .flex-item-0 {
-    flex: 50%;
+  flex: 50%;
 }
-  
+
 .flex-item-1 {
-    flex: 50%;
+  flex: 50%;
 }
 
 .deleteButton {
-    text-align: center;
-    color: white;
-    background-color: #e74c3c;
-    height: 100%;
+  text-align: center;
+  color: white;
+  background-color: #e74c3c;
+  height: 100%;
 }
 
 @media (max-width: 800px) {
-    .flex-item-0, .flex-item-1 {
-        flex: 100%;
-    }
+  .flex-item-0,
+  .flex-item-1 {
+    flex: 100%;
+  }
 }
 
 /* -----Restaurant Page */
 
 .grid {
-    display: grid;
-    margin: 0px 0;
-    grid-template-columns: 60% 40%;
-    padding: 0 30px;
-    margin-top: 12vh;
+  display: grid;
+  margin: 0px 0;
+  grid-template-columns: 60% 40%;
+  padding: 0 30px;
+  margin-top: 12vh;
 }
-  .column1,
-  .column2 {
-    width: 100%;
+.column1,
+.column2 {
+  width: 100%;
 }
 .image-container {
-    width: 100%;
-    height: 320px;
-    margin-bottom: 10px;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 5px;
+  width: 100%;
+  height: 320px;
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 5px;
 }
-  
+
 .restaurant-image {
-    display: block;
-    width: 100%;
-    height: 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .embeded-map {
-    display: block;
-    width: 100%;
-    height: 320px;
-    border: 0;
+  display: block;
+  width: 100%;
+  height: 320px;
+  border: 0;
 }
 .gMap-btn {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    margin: 20px auto 5px;
-    width: 100%;
-    padding: 10px 0;
-    background-color: #f6f0e6;
-    border-radius: 4px;
-    border: 2px solid #e3a75d;
-    color: #af8754;
-    font-weight: bold;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin: 20px auto 5px;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #f6f0e6;
+  border-radius: 4px;
+  border: 2px solid #e3a75d;
+  color: #af8754;
+  font-weight: bold;
 }
-  /* COLUMN 1 */
+/* COLUMN 1 */
 .column2 {
-    padding: 20px;
+  padding: 20px;
 }
 .restaurant-name {
-    font-size: 4rem;
-    color: #af8754;
+  font-size: 4rem;
+  color: #af8754;
 }
-  
+
 .tags {
-    margin: 10px 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2px;
-    width: 100%;
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  width: 100%;
 }
 .tags li {
-    list-style: none;
-    display: block;
-    background-color: #f6f0e6;
-    border: 1px solid #e3a75d;
-    padding: 5px 10px;
-    margin: 2px 0;
-    color: #e3a75d;
+  list-style: none;
+  display: block;
+  background-color: #f6f0e6;
+  border: 1px solid #e3a75d;
+  padding: 5px 10px;
+  margin: 2px 0;
+  color: #e3a75d;
 }
-  
+
 .dates {
-    width: fit-content;
-    background-color: #f6f0e6;
-    border: 1px solid #e3a75d;
-    padding: 5px 15px;
+  width: fit-content;
+  background-color: #f6f0e6;
+  border: 1px solid #e3a75d;
+  padding: 5px 15px;
 }
-  
+
 .dates li {
-    list-style: none;
-    margin-top: 2px;
-    color: #ddbb90;
+  list-style: none;
+  margin-top: 2px;
+  color: #ddbb90;
 }
 .dates li span {
-    display: inline-block;
-    width: 100px;
-    font-weight: bold;
-    color: #e3a75d;
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
+  color: #e3a75d;
 }
-  
+
 .description {
-    margin: 20px 0;
-    font-size: 1.2rem;
-    padding: 0;
+  margin: 20px 0;
+  font-size: 1.2rem;
+  padding: 0;
 }
-  
+
 .price_tag,
 .distance-mile,
 .get-there {
-    list-style: none;
-    display: block;
-    background-color: #f6f0e6;
-    border: 1px solid #e3a75d;
-    padding: 5px 10px;
-    margin: 10px 0;
-    width: fit-content;
-    color: #ddbb90;
+  list-style: none;
+  display: block;
+  background-color: #f6f0e6;
+  border: 1px solid #e3a75d;
+  padding: 5px 10px;
+  margin: 10px 0;
+  width: fit-content;
+  color: #ddbb90;
 }
 .price_tag strong,
 .distance-mile strong,
 .get-there strong {
-    color: #e3a75d;
+  color: #e3a75d;
 }
-  
+
 .restaurant-link {
-    display: block;
-    width: fit-content;
-    color: #af8754;
-    text-decoration: none;
-    padding: 10px;
-    background-color: #f6f0e6;
-    border-radius: 10px;
-    border: 1px solid #af8754;
+  display: block;
+  width: fit-content;
+  color: #af8754;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #f6f0e6;
+  border-radius: 10px;
+  border: 1px solid #af8754;
 }
-  
+
 .heart {
-    font-size: 2.5rem;
-    transition-duration: 0.4s;
+  font-size: 2.5rem;
+  transition-duration: 0.4s;
+}
+
+.submission-message {
+  color: rgb(0, 186, 140);
 }
