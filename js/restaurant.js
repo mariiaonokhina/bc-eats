@@ -9,6 +9,8 @@ const dateList = document.querySelector(".dates");
 const descriptionP = document.querySelector(".description");
 const websiteLink = document.querySelector(".restaurant-link");
 const priceP = document.querySelector(".price_tag");
+const distanceP = document.querySelector(".distance-mile");
+const getThere = document.querySelector(".get-there");
 
 // Functionality
 document.addEventListener("DOMContentLoaded", () => {
@@ -55,6 +57,10 @@ function updateUI(data) {
 
   //Updating Price Tag
   priceP.innerHTML = `<strong>Price Tag:</strong> ${data["price_tag"]}`;
+
+  // Update Distance
+  distanceP.innerHTML = `<strong>Distance in Miles:</strong> ${data["distance_miles"]}`;
+  getThere.innerHTML = `<strong>Get There:</strong> ${data["distance_time"]}`;
 
   // Updating Dates
   data["dates"].forEach((date) => {
