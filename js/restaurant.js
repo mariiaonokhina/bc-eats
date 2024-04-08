@@ -1,4 +1,5 @@
 import { restaurant_list } from "./restaurantdb.js";
+
 // HTML Elements
 const restaurantImageContainer = document.querySelectorAll(".restaurant-image");
 const iframeMap = document.querySelector(".embeded-map");
