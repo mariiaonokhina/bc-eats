@@ -4,7 +4,7 @@ const form = document.querySelector("#contact-form");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  message.textContent = "Form Sent Successfully";
+  message.textContent = "Form Submitted Successfully";
   event.target.reset();
 
   setTimeout(() => {
