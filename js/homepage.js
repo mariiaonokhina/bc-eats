@@ -45,7 +45,7 @@ function setupCheckboxListeners() {
 setupCheckboxListeners(); 
 
 function populateTagsSelected() {
-    populateTagsSelected.innerHTML = "";    // Clear previous tags
+    tagsSelected.innerHTML = ""; // Clear previous tags
 
     checkboxes.forEach(checkbox => {
         if (checkbox.checked) {
@@ -54,17 +54,26 @@ function populateTagsSelected() {
             let text = document.createElement('span');
 
             text.innerHTML = checkbox.value;
-
             img.src = "../assets/x-solid.svg";
-
             img.classList.add("cancel-img");
-            
+
             newTag.appendChild(img);
             newTag.appendChild(text);
-
             newTag.classList.add("tag");
-
             tagsSelected.appendChild(newTag);
+
+            img.addEventListener('click', function() {
+                tagsSelected.removeChild(newTag);
+
+                // Find the related checkbox and uncheck it
+                const relatedCheckbox = document.querySelector(`input[type='checkbox'][value='${text.textContent}']`);
+                if (relatedCheckbox) {
+                    relatedCheckbox.checked = false;
+                    toggleContinueButton(); 
+
+                    fetchAndDisplayRestaurants();
+                }
+            });
         }
     })
 }
@@ -164,11 +173,9 @@ document.getElementById("add-restriction").addEventListener("click", function() 
     // Check if the selected value is not empty and not already added
     if (selectedValue && !Array.from(tagsSelected.children).some(tag => tag.textContent === selectedValue)) {
         
-        
         // Append the new tag to the tags-selected container
         tagsSelected.appendChild(newTag);
 
-        // Optionally, you might want to reset the select dropdown back to its placeholder option
         selectElement.value = " ";
     }
 });
